@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    line-height: 2.5;
+}
+p,h1,h2,h3,h4,h5,h6,div{
+    padding: 15px 0px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+header{
+    background-color: rgb(31, 98,68);
+    padding: 98px 91px;
+    color: white;
+}
+header p{
+    width: 40%;
+    color: #95aaa4;
+}
+header div a{
+    padding: 10px 20px;
+    border: 1px solid #95aaa4;
+    border-radius: 30px;
+}
+header div a.a1{
+    background-color: #e0ad20;
+    color: black;
+    border-color: #e0ad20;
+}
+main{
+    background-color: #eff2f1;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.info ul{
+    display: inline-flex;
+    justify-content: space-around;    
+    padding: 70px 20px 10px;
+}
+.info li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 50px;
+}
+.icon{
+    background-color: rgb(31, 98,68);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 48px;
+    height: 48px;
+}
+.icon i{
+    color: white;
+}
+.text p{
+    margin: 0;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+form{
+    width: 50%;
+    margin: 30px auto;
+}
+form input{
+    padding: 20px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: none;
+    outline: 1px solid rgb(196, 196, 196);
+}
+form .name{
+    height: 50px;
+}
+form label{
+    text-align: left;
+    display: block;
+}
+
+form textarea#message{
+    width: 100%;
+    height: 120px;
+    border-radius: 20px;
+    margin-bottom: 80px;
+    padding: 20px;
+    display: block;
+    border: none;
+    outline: 1px solid rgb(196, 196, 196);
+}
+form input.Sign-in{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: auto;
+    border-radius: 20px;
+    padding: 5px 20px;
+}

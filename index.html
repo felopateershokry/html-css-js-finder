@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finder | Contractors</title>
     <link rel="icon" href="images/upscalemedia-transformed.png">
-    <link rel="stylesheet" href="css/style task3.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="libs/font-awesome/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,19 @@
 <body>
     <nav>
         <div class="navbar">
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Listings</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Components</a></li>
+                </ul>
+        </div>
             <a href="#"><img src="images/Screenshot 2025-07-25 001140.png" alt="" width="122px" ></a>
             <ul class="mainMenu">
                 <li>
@@ -213,7 +226,7 @@
                 <div class="headerSearch">
                     <h1>Explore top-rated certified pros nearby</h1>
                     <div class="inputSearch">
-                        <form class="search-container" >
+                        <form class="search-container">
                             <div class="input-icon">
                                 <input id="serviceInput" type="text" name="service" placeholder="What service do you need?" aria-label="Service needed" autocomplete="off"/>
                             </div>
@@ -229,7 +242,7 @@
                         <a href="#">Electrican</a>
                         <a href="#">Plumbing</a>
                         <a href="#">Landscaping</a>
-                        <a href="#">Roofing</a>
+                        <a href="#" id="lastAheader">Roofing</a>
                     </div>
                 </div>
             </div>
@@ -248,20 +261,20 @@
                 <h2>Browse pros in your area</h2>
                 <a href="#" class="view">View all</a>
             </div>
-            <div class="link12">
-                <a href="#"><i class="fa-solid fa-house"></i><span>Flooring</span></a>
-                <a href="#"><i class="fa-solid fa-trowel"></i><span>Concrete</span></a>
-                <a href="#"><i class="fa-solid fa-paintbrush"></i><span>Cleaning</span></a>
-                <a href="#"><i class="fa-solid fa-person"></i><span>Handyperson</span></a>
-                <a href="#"><i class="fa-solid fa-paint-roller"></i><span>Painting</span></a>
-                <a href="#"><i class="fa-solid fa-faucet-drip"></i><span>Plumbing</span></a>
-                <a href="#"><i class="fa-solid fa-bug"></i><span>Pest control</span></a>
-                <a href="#"><i class="fa-solid fa-fire"></i><span>Heating & furnace</span></a>
-                <a href="#"><i class="fa-solid fa-plug"></i><span>Electrican</span></a>
-                <a href="#"><i class="fa-solid fa-helmet-safety"></i><span>Roofing</span></a>
-                <a href="#"><i class="fa-solid fa-screwdriver-wrench"></i><span>Carpentry</span></a>
-                <a href="#"><i class="fa-solid fa-tree"></i><span>Landscaping</span></a>
-            </div>
+            <ul class="link12">
+                <li href="#"><i class="fa-solid fa-house"></i><span>Flooring</span></li>
+                <li href="#"><i class="fa-solid fa-trowel"></i><span>Concrete</span></li>
+                <li href="#"><i class="fa-solid fa-paintbrush"></i><span>Cleaning</span></li>
+                <li href="#"><i class="fa-solid fa-person"></i><span>Handyperson</span></li>
+                <li href="#"><i class="fa-solid fa-paint-roller"></i><span>Painting</span></li>
+                <li href="#"><i class="fa-solid fa-faucet-drip"></i><span>Plumbing</span></li>
+                <li href="#"><i class="fa-solid fa-bug"></i><span>Pest control</span></li>
+                <li href="#"><i class="fa-solid fa-fire"></i><span>Heating&furnace</span></li>
+                <li href="#"><i class="fa-solid fa-plug"></i><span>Electrican</span></li>
+                <li href="#"><i class="fa-solid fa-helmet-safety"></i><span>Roofing</span></li>
+                <li href="#"><i class="fa-solid fa-screwdriver-wrench"></i><span>Carpentry</span></li>
+                <li href="#"><i class="fa-solid fa-tree"></i><span>Landscaping</span></li>
+            </ul>
         </section>
         <section class="getmatched">
             <div class="leftGetmatched">
@@ -548,11 +561,15 @@
     </main>
     <footer>
         <div class="upper">
-            <i class="fa-regular fa-envelope"></i>
-            <h3 class="right">Subscribe to our newsletter</h3>
-            <a href="#" class="sub">Subscribe</a>
-            <h3 class="left">Need help?</h3>
-            <a href="#" class="contact">Contact us</a>
+            <div class="upl">
+                <i class="fa-regular fa-envelope"></i>
+                <h3 class="right">Subscribe to our newsletter</h3>
+                <a href="#" class="sub">Subscribe</a>
+            </div>
+                <div class="upr">
+                <h3 class="left">Need help?</h3>
+                <a href="#" class="contact">Contact us</a>
+            </div>
         </div>
         <div class="hr"></div>
         <div class="bigFooter">
@@ -620,15 +637,56 @@
                 <a href="#">Tampa</a>
             </div>
             <dib class="b2">
+                <div class="bol">
                 <span>© All rights reserved. Made by </span>
                 <a href="#">Createx Studio</a>
+                </div>
+                <div class="bor">
                 <img src="images/visa-dark-mode.svg" alt="">
                 <img src="images/mastercard.svg" alt="">
                 <img src="images/paypal-dark-mode.svg" alt="">
                 <img src="images/google-pay-dark-mode.svg" alt="">
                 <img src="images/apple-pay-dark-mode.svg" alt="">
+                </div>
             </dib>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                    
+                    const icon = this.querySelector('i');
+                    if (mobileMenu.classList.contains('active')) {
+                        icon.className = 'fa-solid fa-times';
+                    } else {
+                        icon.className = 'fa-solid fa-bars';
+                    }
+                });
+                
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+                        mobileMenu.classList.remove('active');
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.className = 'fa-solid fa-bars';
+                    }
+                });
+                
+                window.addEventListener('resize', function() {
+                    if (window.innerWidth > 768) {
+                        mobileMenu.classList.remove('active');
+                        const icon = mobileMenuToggle.querySelector('i');
+                        icon.className = 'fa-solid fa-bars';
+                    }
+                });
+            }
+        });
+    </script>
+
+
 </body>
 </html>

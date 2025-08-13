@@ -16,13 +16,13 @@ p,h1,h2,h3,h4,h5,h6,div{
 body {
     font-family: "Inter", sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: #ddd;
+    background-color: #121212;
 }
 
 nav{
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -40,14 +40,14 @@ nav .navbar{
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: #333;
+    color: #ddd;
     cursor: pointer;
     padding: 0.5rem;
 }
 .mobile-menu {
     display: none;
-    background: #fff;
-    border-top: 1px solid #eee;
+    background: #1e1e1e;
+    border-top: 1px solid #333;
     padding: 1rem;
 }
 
@@ -61,12 +61,12 @@ nav .navbar{
 
 .mobile-nav-list li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #333;
 }
 
 .mobile-nav-list a {
     text-decoration: none;
-    color: #333;
+    color: #ddd;
     font-weight: 500;
 }
 nav .navbar>a{
@@ -83,7 +83,7 @@ nav .navbar>.mainMenu{
 nav .navbar>.mainMenu>li>a{
     padding: 8px 18px;
     text-decoration: none;
-    color: #111827;
+    color: #ccc;
 }
 nav .navbar>.mainMenu>li>a.first4::after{
     content: "\f078";
@@ -92,7 +92,7 @@ nav .navbar>.mainMenu>li>a.first4::after{
     margin-left: 2px;
 }
 nav .navbar>.mainMenu>li>a:hover{
-    background-color: #f2f3f5;
+    background-color: #333;
     border-radius: 8px;
 }
 nav .navbar>.mainMenu>li>.innerList{
@@ -105,9 +105,9 @@ nav .navbar>.mainMenu>li>.innerList{
 }
 nav .navbar>.mainMenu>li:hover>.innerList{
     visibility: visible;
-    background-color: white;
+    background-color: #222;
     margin: 5px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 7px 29px 0px;
     border-radius: 8px;
     padding: 20px 8px 0px;
 }
@@ -117,7 +117,7 @@ nav .navbar>.mainMenu>li>.innerList li{
 nav .navbar>.mainMenu>li>.innerList li a{
     text-decoration: none;
     padding: 8px 12px;
-    color: #111827;
+    color: #ccc;
     font-size: 14px;
     line-height: 21px;
 
@@ -126,15 +126,16 @@ nav .navbar>.mainMenu>li>.innerList li span{
     font-size: 14px;
     line-height: 21px;
     font-weight: 500;
+    color: #bbb;
 }
 nav .navbar>.mainMenu>li>.innerList li p{
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
-    color: #6C727F;
+    color: #888;
 }
 nav .navbar>.mainMenu>li>.innerList li:hover{
-    background-color: #f2f3f5;
+    background-color: #333;
     border-radius: 8px;
 }
 .nav-controls {
@@ -152,10 +153,11 @@ nav .navbar>.mainMenu>li>.innerList li:hover{
     padding: 6px;
     border-radius: 8px;
     transition: background-color 0.2s ease;
+    color: white;
 }
-/* .theme-selector{
-    
-} */
+.theme-selector{
+    background-color: #1e1e1e;
+}
 .theme-selector #theme-select{
     align-items: center;
     border: none;
@@ -165,15 +167,17 @@ nav .navbar>.mainMenu>li>.innerList li:hover{
     transition: background-color 0.2s ease;
 }
 .theme-selector #theme-select:hover{
-    background-color: #f2f3f5;
+    background-color: #333;
+}
+.theme-selector #theme-select i{
+    color: white;
 }
 .theme-selector .theme-list{
     list-style-type: none;
     visibility: hidden;
-    background-color: white;
+    background-color: #1e1e1e;
     position: absolute;
     z-index: 1000;
-    
 }
 .theme-selector .theme-list li{
     width: 100%;
@@ -187,23 +191,24 @@ nav .navbar>.mainMenu>li>.innerList li:hover{
     transition: background-color 0.2s ease;
 }
 .theme-selector .theme-list li button:hover{
-    background-color: #f2f3f5;
+    background-color: #333;
 }
 .theme-selector .theme-list li button i{
-    color: black;
+    color: white;
 }
 .theme-selector .theme-list li button span{
     margin-left: 10px;
+    color: white;
 }
 
 .icon-button:hover {
-    background-color: #f2f3f5;
+    background-color: #333;
 }
 
 .icon-button svg {
     width: 20px;
     height: 20px;
-    fill: #111827;
+    fill: #ccc;
     display: block;
 }
 
@@ -261,12 +266,12 @@ header .imageHeader .headerSearch .inputSearch{
     padding-bottom: 48px;
 }
 header .imageHeader .headerSearch .inputSearch .search-container{
-    background: white;
+    background: #ffffff;
     border-radius: 12px;
     display: flex;
     align-items: center;
     width: 100%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
     overflow: hidden;
     font-size: 16px;
     line-height: 24px;
@@ -277,12 +282,12 @@ header .imageHeader .headerSearch .inputSearch .search-container input[type="tex
     border: none;
     padding: 14px 10px 14px 35px;
     font-size: 16px;
-    color: #555;
+    color: #ccc;
     outline: none;
     flex-grow: 1;
 }
 header .imageHeader .headerSearch .inputSearch .search-container .divid{
-    background-color: #d0d7de;
+    background-color: #444;
     width: 1px;
     height: 40px;
 }
@@ -303,7 +308,7 @@ header .imageHeader .headerSearch .inputSearch .search-container .divid{
     background-position: center left;
     width: 150px;
 }
-header .imageHeader .headerSearch .inputSearch .search-container .search-btn{
+header .imageHeader .headerSearch .search-container .search-btn{
     background-color: var(--color-primary);
     color: white;
     border: none;
@@ -315,7 +320,7 @@ header .imageHeader .headerSearch .inputSearch .search-container .search-btn{
     transition: background-color 0.3s ease;
     height: 48px;
 }
-header .imageHeader .headerSearch .inputSearch .search-container .search-btn:hover{
+header .imageHeader .headerSearch .search-container .search-btn:hover{
     background-color: #bd3d3b;
     
 }
@@ -327,7 +332,7 @@ header .imageHeader .headerSearch .headerLinks{
 header .imageHeader .headerSearch .headerLinks a{
     text-decoration: none;
     color: white;
-    background-color: #3d7a81;
+    background-color: #1a4f56;
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 50px;
@@ -342,7 +347,7 @@ header .imageHeader .headerSearch .headerLinks a:hover{
     color: black;
 }
 .pros{
-    background-color: white;
+    background-color: #222;
     margin: 0px 96px 16px 96px;
 }
 .pros .viewh2{
@@ -354,11 +359,11 @@ header .imageHeader .headerSearch .headerLinks a:hover{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: #111827;
+    color: #ccc;
 }
 .pros .viewh2 .view{
     text-decoration: none;
-    color:#4E5562;
+    color:#aaa;
     margin-top: 96px;
 }
 .pros .viewh2 .view:hover{
@@ -380,21 +385,15 @@ header .imageHeader .headerSearch .headerLinks a:hover{
 .pros .link12 li{
     flex: 0 0 25%;
     text-decoration: none;
-    color:#4E5562;
+    color:#aaa;
     padding: 15px 45px 15px 4px;
     display: flex;
 }
 .pros .link12 li i{
-    background-color: #eef1f6;
+    background-color: #444;
     border-radius: 50%;
     padding: 20px;
     transition: transform 0.6s;
-}
-.pros .link12 li span{
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    padding: 15px 20px 0px 20px;
 }
 .pros .link12 li:hover i{
     transform: scale(1.1);
@@ -404,13 +403,13 @@ header .imageHeader .headerSearch .headerLinks a:hover{
     text-underline-offset: 4px;
 }
 .getmatched{
-    background-color: white;
+    background-color: #222;
     margin: 0px 96px 16px 96px;
     display: flex;
 }
 .getmatched .leftGetmatched{
     padding: 48px 12px;
-    background-color: white;
+    background-color: #222;
     width: 415.975px;
     height: 470px;
     position: relative;
@@ -418,21 +417,22 @@ header .imageHeader .headerSearch .headerLinks a:hover{
 .getmatched .leftGetmatched .background{
     width: 306px;
     height: 470px;
-    background-color: #eef1f6;
+    background-color: #333;
     position: relative;
     border-radius: 8px;
     padding: 0px 10px;
-    box-shadow: rgba(181, 185, 189, 0.2) 0px 4px 24px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 24px;
 }
 .getmatched .leftGetmatched .background h2{
     padding: 48px 48px 8px 48px;
     font-size: 28px;
     line-height: 36.4px;
     font-weight: 600;
+    color: #ccc;
 }
 .getmatched .leftGetmatched .background p{
     padding: 0px 48px 48px 48px;
-    color: #747880;
+    color: #888;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -440,7 +440,7 @@ header .imageHeader .headerSearch .headerLinks a:hover{
 .getmatched .imgGetmatched{
     position: absolute;
     z-index: 99;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(18, 18, 18, 0.5);
     margin-top: 240px;
     margin-left: 40px;
     padding: 45px 20px 30px 30px;
@@ -459,11 +459,11 @@ header .imageHeader .headerSearch .headerLinks a:hover{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: black;
+    color: #ccc;
 }
 .getmatched .rightGetmatched .viewh2 a{
     text-decoration: none;
-    color:#4E5562;
+    color:#aaa;
     margin-top: 48px;
 }
 .getmatched .rightGetmatched .viewh2 a:hover{
@@ -530,11 +530,11 @@ section.popularProjects{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: black;
+    color: #ccc;
 }
 .popularProjects .viewh2 a{
     text-decoration: none;
-    color:#4E5562;
+    color:#aaa;
     margin-top: 60px;
 }
 .popularProjects .viewh2 a:hover{
@@ -573,7 +573,7 @@ section.popularProjects .project .projectheader .overlay{
     position: absolute;
     bottom: 8px;
     left: 10px;
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(0,0,0,0.2);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -589,8 +589,8 @@ section.popularProjects .project .projectheader i{
     position: absolute;
     top: 20px;
     right: 20px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.8);
+    color: #ccc;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
     border-radius: 50%;
     visibility: hidden;
@@ -602,7 +602,7 @@ section.popularProjects .project .projectheader:hover i{
 section.popularProjects .project .projectbody{
     display: flex;
     justify-content: space-between;
-    border: 1px solid rgb(224, 223, 223);
+    border: 1px solid #444;
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -617,6 +617,7 @@ section.popularProjects .project .projectbody .leftProjectBody i{
 section.popularProjects .project .projectbody .leftProjectBody p{
     font-size: 14px;
     font-weight: 400;
+    color: #ccc;
 }
 section.popularProjects .project .projectbody .leftProjectBody span{
     font-size: 12px;
@@ -630,21 +631,21 @@ section.popularProjects .project .projectbody .rightProjectBody a{
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 400;
-    background-color: white;
-    color: black;
+    background-color: #222;
+    color: #ccc;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     text-decoration: none;
     transition: background 0.3s,color 0.3s;
 }
 section.popularProjects .project .projectbody .rightProjectBody a:hover{
-    background-color: black;
-    color: white;
+    background-color: #ccc;
+    color: #222;
 }
 section.expert{
     margin-top: 100px;
     padding: 60px 94px;
-    background-color: #f5f7fa;
+    background-color: #222;
 }
 .expert .viewh2{
     padding: 0px 12px 15px;
@@ -655,11 +656,11 @@ section.expert{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: black;
+    color: #ccc;
 }
 .expert .viewh2 a{
     text-decoration: none;
-    color:#4E5562;
+    color:#aaa;
     margin-top: 48px;
 }
 .expert .viewh2 a:hover{
@@ -700,7 +701,7 @@ section.expert{
     font-size: 12px;
     line-height: 12px;
     font-weight: 500;
-    background-color: #c4c5c62d;;
+    background-color: #444;
 }
 .expert .expertBody .prog .body h3{
     font-size: 20px;
@@ -709,6 +710,7 @@ section.expert{
     margin-left: 0px;
     margin-top: 5px;
     margin-bottom: 5px;
+    color: #ccc;
 }
 .expert .expertBody .prog:hover .body h3{
     text-decoration: underline;
@@ -718,7 +720,7 @@ section.expert{
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
-    color: gray;
+    color: #999;
     margin-bottom: 10px;
 }
 .expert .expertBody .prog .body article span{
@@ -736,12 +738,13 @@ section.expert{
     line-height: 40px;
     font-weight: 600;
     padding: 20px 10px;
+    color: #ccc;
 }
 .howItWorks .top p{
     font-size: 18px;
     line-height: 27px;
     font-weight: 400;
-    color: #4E5562;
+    color: #aaa;
 }
 .howItWorks .bottom{
     display: flex;
@@ -760,10 +763,11 @@ section.expert{
     line-height: 28px;
     font-weight: 600;
     padding-bottom: 10px;
+    color: #ccc;
     
 }
 .howItWorks .each p{
-    color: #4E5562;
+    color: #aaa;
 }
 .customize{
     position: fixed;
@@ -773,23 +777,23 @@ section.expert{
 }
 .customize button.sett{
     color: gray;
-    background-color: white;
+    background-color: #222;
     transform: rotate(-90deg);
     padding: 10px 15px;
-    border: 0.5px solid white;
+    border: 0.5px solid #444;
     border-radius: 20px;
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
     font-size: 11px;
-    border-color: #dddddd;
+    border-color: #444;
     transition: background-color 1s ease;
 }
 
 .customize button.sett:hover{
-    border-color: #000000;
-    color: #000000;
+    border-color: #ccc;
+    color: #ccc;
 }
 
 .customize button.sett:hover i{
@@ -816,7 +820,7 @@ aside.customizer {
     position: fixed;
     top: 0; right: 0; bottom: 0;
     width: 300px;
-    background: white;
+    background: rgb(0, 0, 0);
     box-shadow: -4px 0 8px rgb(0 0 0 / 0.15);
     padding: 1.5rem 1.5rem 2rem 1.5rem;
     overflow-y: auto;
@@ -876,22 +880,22 @@ main>.top{
 }
 main>.top a{
     color: gray;
-    background-color: white;
+    background-color: #222;
     transform: rotate(-90deg);
     padding: 10px 15px;
-    border: 0.5px solid white;
+    border: 0.5px solid #444;
     border-radius: 20px;
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
     font-size: 11px;
-    border-color: #dddddd;
+    border-color: #444;
     transition: background-color 1s ease;
 }
 main>.top a:hover{
-    border-color: #000000;
-    color: #000000;
+    border-color: #ccc;
+    color: #ccc;
 }
 
 section.business{
@@ -937,7 +941,7 @@ section.business .businessLeft .submitBtn{
     font-weight: 600;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    background-color: #3d7a81;
+    background-color: #1a4f56;
     padding: 14px 24px;
     margin-left: 10px;
     transition: 0.4s;
@@ -968,7 +972,7 @@ section.business .businessRight{
 section.getFinder{
     margin: 112px 112px 64px 112px;
     display: flex;
-    background-color: #fbeeee;
+    background-color: #2a1a1a;
     border-radius: 8px;
 }
 section.getFinder .left{
@@ -980,12 +984,13 @@ section.getFinder .left h2{
     font-size: 40px;
     line-height: 48px;
     font-weight: 600;
+    color: #ccc;
 }
 section.getFinder .left p{
     padding-top: 8px;
     padding-bottom: 24px;
     padding-left: 120px;
-    color: #555;
+    color: #aaa;
 }
 section.getFinder .left .finderGetLinks{
     padding-bottom: 86px;
@@ -994,7 +999,7 @@ section.getFinder .left .finderGetLinks{
 section.getFinder .left .finderGetLinks a{
     text-decoration: none;
     display: inline-block;
-    background-color: #000000;
+    background-color: #444;
     color: white;
     display: inline-flex;
     padding: 10px 15px;
@@ -1007,14 +1012,14 @@ section.getFinder .left .finderGetLinks a.a1{
     transition: 0.3s;
 }
 section.getFinder .left .finderGetLinks a.a1:hover{
-    background-color: #333d4c;
+    background-color: #666;
 }
 section.getFinder .left .finderGetLinks a.a2{
     margin-left: 10px;
     transition: 0.3s;
 }
 section.getFinder .left .finderGetLinks a.a2:hover{
-    background-color: #333d4c;
+    background-color: #666;
 }
 section.getFinder .right{
     width: 50%;
@@ -1031,11 +1036,11 @@ section.common{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: black;
+    color: #ccc;
 }
 .common .viewh2 a{
     text-decoration: none;
-    color:#4E5562;
+    color:#aaa;
     margin-top: 48px;
 }
 .common .viewh2 a:hover{
@@ -1067,7 +1072,7 @@ section.common{
     transform: scale(1.05);
 }
 .common .commonBody .commonEach .rightEach{
-    border: 1px solid rgb(239, 238, 238);
+    border: 1px solid #444;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
     width: 100%;
@@ -1080,42 +1085,41 @@ section.common{
     padding-left: 18px;
     padding-top: 20px;
     padding-bottom: 10px;
+    color: #ccc;
 }
 .common .commonBody .commonEach:hover .rightEach h4{
     text-decoration: underline;
     text-underline-offset: 4px;
-}
-.common .commonBody .commonEach .rightEach i{
-    color: #fc9231;
 }
 .common .commonBody .commonEach .rightEach p{
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
     padding-left: 18px;
+    color: #aaa;
 }
 .common .commonBody .commonEach .rightEach p span{
     font-size: 12px;
     line-height: 12px;
     font-weight: 300;
     padding-right: 20px;
-    color: #555;
+    color: #ccc;
 }
 .common .commonBody .commonEach .rightEach .commonA{
     padding: 50px 0px 10px 18px;
 }
 .common .commonBody .commonEach .rightEach a{
-    background-color: white;
+    background-color: #222;
     text-decoration: none;
-    color: black;
-    border: 1px solid black;
+    color: #ccc;
+    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px 20px;
     transition: 0.3s;
 }
 .common .commonBody .commonEach .rightEach a:hover{
-    color: white;
-    background-color: black;
+    color: #222;
+    background-color: #ccc;
 }
 footer{
     background-color: #111827;
@@ -1351,6 +1355,7 @@ footer .bottom .b2 a:hover{
 footer .bottom .b2 img{
     padding: 10px;
 }
+
 @media (max-width: 768px){
     nav .navbar>.mainMenu{
         display: none;

@@ -198,19 +198,29 @@
                 <li><a href="#">Components</a></li>
             </ul>
             <div class="nav-controls">
-            <button class="icon-button" aria-label="Toggle dark mode">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="12" r="5" stroke-width="2" stroke="#121212" fill="none" />
-                    <path stroke="#121212" stroke-width="2" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                </svg>
+                <div class="theme-selector">
+                    <button id="theme-select">
+                        <i class="fa-solid fa-sun"></i>
+                    </button>
+                    <ul class="theme-list">
+                        <li>
+                        <button class="light" id="light">
+                            <i class="fa-solid fa-sun"></i>
+                            <span>Light</span>
+                        </button>
+                        </li>
+                        <li>
+                        <button class="dark" id="dark">
+                            <i class="fa-solid fa-moon"></i>
+                            <span>Dark</span>
+                        </button>
+                        </li>
+                    </ul>
+                </div>
+            <button class="icon-button">
+                <i class="fa-solid fa-user"></i>
             </button>
-            <button class="icon-button" aria-label="User account">
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="7" r="4" stroke="#121212" stroke-width="2" fill="none" />
-                    <path d="M5.5 21h13a6 6 0 0 0 -13 0z" stroke="#121212" stroke-width="2" fill="none" />
-                </svg>
-            </button>
-            <button class="pro-button" aria-label="Join Pro Network">
+            <button class="pro-button">
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" aria-labelledby="plusIconTitle" role="img" >
                     <title id="plusIconTitle">Plus Sign</title>
                     <path fill="currentColor" d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z" />
@@ -248,10 +258,46 @@
             </div>
         </header>
         <div class="customize">
-            <a href="#" class="sett">
+            <button class="sett">
                 CUSTOMIZE
                 <i class="fa-solid fa-gear"></i>
-            </a>
+            </button>
+            <aside class="customizer" aria-label="Customize theme panel">
+                <header>Customize theme <button id="close" style="float:right; font-weight: 700; background:none; border:none; font-size:1.25rem; cursor:pointer;">×</button></header>
+                <section>
+                    <h2>Colors</h2>
+
+                    <label for="color-primary">
+                        Primary
+                        <input type="color" id="color-primary" name="color-primary" value="#d85151" aria-describedby="primary-hex" />
+                        <input type="text" id="primary-hex" readonly value="#d85151" aria-label="Primary color hex code" />
+                    </label>
+
+                    <label for="color-success">
+                        Success
+                        <input type="color" id="color-success" name="color-success" value="#33b361" aria-describedby="success-hex" />
+                        <input type="text" id="success-hex" readonly value="#33b361" aria-label="Success color hex code" />
+                    </label>
+
+                    <label for="color-warning">
+                        Warning
+                        <input type="color" id="color-warning" name="color-warning" value="#fc9231" aria-describedby="warning-hex" />
+                        <input type="text" id="warning-hex" readonly value="#fc9231" aria-label="Warning color hex code" />
+                    </label>
+
+                    <label for="color-danger">
+                        Danger
+                        <input type="color" id="color-danger" name="color-danger" value="#f03d3d" aria-describedby="danger-hex" />
+                        <input type="text" id="danger-hex" readonly value="#f03d3d" aria-label="Danger color hex code" />
+                    </label>
+
+                    <label for="color-info">
+                        Info
+                        <input type="color" id="color-info" name="color-info" value="#3d7a81" aria-describedby="info-hex" />
+                        <input type="text" id="info-hex" readonly value="#3d7a81" aria-label="Info color hex code" />
+                    </label>
+                </section>
+            </aside>
         </div>
         <div class="top">
             <a href="#">TOP <i class="fa-solid fa-arrow-right"></i></a>
@@ -651,42 +697,7 @@
             </dib>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            if (mobileMenuToggle && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('active');
-                    
-                    const icon = this.querySelector('i');
-                    if (mobileMenu.classList.contains('active')) {
-                        icon.className = 'fa-solid fa-times';
-                    } else {
-                        icon.className = 'fa-solid fa-bars';
-                    }
-                });
-                
-                document.addEventListener('click', function(event) {
-                    if (!mobileMenuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
-                        mobileMenu.classList.remove('active');
-                        const icon = mobileMenuToggle.querySelector('i');
-                        icon.className = 'fa-solid fa-bars';
-                    }
-                });
-                
-                window.addEventListener('resize', function() {
-                    if (window.innerWidth > 768) {
-                        mobileMenu.classList.remove('active');
-                        const icon = mobileMenuToggle.querySelector('i');
-                        icon.className = 'fa-solid fa-bars';
-                    }
-                });
-            }
-        });
-    </script>
-
+    <script src="js/script.js"></script>
 
 </body>
 </html>

@@ -44,10 +44,12 @@ document.getElementById("theme-select").onclick=function(){
 
 document.getElementById("light").addEventListener("click", function () {
     document.querySelector("link[href*='style']").setAttribute("href", "css/style.css");
+    document.querySelector(".theme-list").style.visibility = "hidden";
 });
 
 document.getElementById("dark").addEventListener("click", function () {
-    document.querySelector("link[href*='style']").setAttribute("href", "css/dark.css");
+    document.querySelector("link[href*='style']").setAttribute("href", "css/style-dark.css");
+    document.querySelector(".theme-list").style.visibility = "hidden";
 });
 
 const colors = ['primary', 'success', 'warning', 'danger', 'info'];

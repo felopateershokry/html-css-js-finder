@@ -27,7 +27,7 @@
                     <li><a href="#">Docs</a></li>
                     <li><a href="#">Components</a></li>
                 </ul>
-        </div>
+            </div>
             <a href="#"><img src="images/Screenshot 2025-07-25 001140.png" alt="" width="122px" ></a>
             <ul class="mainMenu">
                 <li>
@@ -200,7 +200,8 @@
             <div class="nav-controls">
                 <div class="theme-selector">
                     <button id="theme-select">
-                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-sun" id="sun"></i>
+                        <i class="fa-solid fa-moon" id="moon"></i>
                     </button>
                     <ul class="theme-list">
                         <li>
@@ -234,15 +235,17 @@
             <div class="imageHeader">
                 <img src="images/hero.png" alt="" width="100%">
                 <div class="headerSearch">
-                    <h1>Explore top-rated certified pros nearby</h1>
+                    <h2>Explore top-rated certified pros nearby</h2>
                     <div class="inputSearch">
                         <form class="search-container">
+                            <div class="felo">
                             <div class="input-icon">
                                 <input id="serviceInput" type="text" name="service" placeholder="What service do you need?" aria-label="Service needed" autocomplete="off"/>
                             </div>
                             <span class="divid"></span>
                             <div class="input-icon">
                                 <input id="zipInput" type="text" name="zip" placeholder="Zip code" aria-label="Zip code" maxlength="10" pattern="[0-9\s\-]*" inputmode="numeric" autocomplete="postal-code"/>
+                            </div>
                             </div>
                             <button type="submit" class="search-btn">Search</button>
                         </form>
@@ -263,10 +266,9 @@
                 <i class="fa-solid fa-gear"></i>
             </button>
             <aside class="customizer" aria-label="Customize theme panel">
-                <header>Customize theme <button id="close" style="float:right; font-weight: 700; background:none; border:none; font-size:1.25rem; cursor:pointer;">×</button></header>
+                <div class="header">Customize theme <button id="close">×</button></div>
                 <section>
                     <h2>Colors</h2>
-
                     <label for="color-primary">
                         Primary
                         <input type="color" id="color-primary" name="color-primary" value="#d85151" aria-describedby="primary-hex" />
@@ -302,26 +304,100 @@
         <div class="top">
             <a href="#">TOP <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <section class="pros">
-            <div class="viewh2">
-                <h2>Browse pros in your area</h2>
-                <a href="#" class="view">View all</a>
+        <section class="tweleveIcons">
+            <div class="browseHeader">
+                <h1>Browse pros in your area</h1>
+                <a href="#" class="view">
+                    View All
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
             </div>
-            <ul class="link12">
-                <li href="#"><i class="fa-solid fa-house"></i><span>Flooring</span></li>
-                <li href="#"><i class="fa-solid fa-trowel"></i><span>Concrete</span></li>
-                <li href="#"><i class="fa-solid fa-paintbrush"></i><span>Cleaning</span></li>
-                <li href="#"><i class="fa-solid fa-person"></i><span>Handyperson</span></li>
-                <li href="#"><i class="fa-solid fa-paint-roller"></i><span>Painting</span></li>
-                <li href="#"><i class="fa-solid fa-faucet-drip"></i><span>Plumbing</span></li>
-                <li href="#"><i class="fa-solid fa-bug"></i><span>Pest control</span></li>
-                <li href="#"><i class="fa-solid fa-fire"></i><span>Heating&furnace</span></li>
-                <li href="#"><i class="fa-solid fa-plug"></i><span>Electrican</span></li>
-                <li href="#"><i class="fa-solid fa-helmet-safety"></i><span>Roofing</span></li>
-                <li href="#"><i class="fa-solid fa-screwdriver-wrench"></i><span>Carpentry</span></li>
-                <li href="#"><i class="fa-solid fa-tree"></i><span>Landscaping</span></li>
-            </ul>
-        </section>
+            <div class="browseContainer">
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <span>Flooring</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-trowel"></i>
+                    </div>
+                    <span>Concrete</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <span>Cleaning</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-person"></i>
+                    </div>
+                    <span>Handyperson</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-paint-roller"></i>
+                    </div>
+                    <span>Painting</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-toilet"></i>
+                    </div>
+                    <span>Plumbing</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-bug"></i>
+                    </div>
+                    <span>Pest control</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <span>Carpentry</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <span>Electrician</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <span>Landscaping</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <span>Roofing</span>
+                </div>
+
+                <div class="proItem">
+                    <div class="iconCircle">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <span>Heating & furnace</span>
+                </div>
+            </div>
+            </section>
         <section class="getmatched">
             <div class="leftGetmatched">
                 <div class="background">

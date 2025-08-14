@@ -16,13 +16,12 @@ p,h1,h2,h3,h4,h5,h6,div{
 body {
     font-family: "Inter", sans-serif;
     line-height: 1.6;
-    color: #ddd;
-    background-color: #121212;
+    color: #e0e0e0;
+    background-color: #111827;
 }
-
 nav{
-    background: #1e1e1e;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    background: #111827;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -40,14 +39,14 @@ nav .navbar{
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: #ddd;
+    color: #e0e0e0;
     cursor: pointer;
     padding: 0.5rem;
 }
 .mobile-menu {
     display: none;
-    background: #1e1e1e;
-    border-top: 1px solid #333;
+    background: #111827;
+    border-top: 1px solid #444;
     padding: 1rem;
 }
 
@@ -61,12 +60,12 @@ nav .navbar{
 
 .mobile-nav-list li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #444;
 }
 
 .mobile-nav-list a {
     text-decoration: none;
-    color: #ddd;
+    color: #e0e0e0;
     font-weight: 500;
 }
 nav .navbar>a{
@@ -76,14 +75,14 @@ nav .navbar>.mainMenu{
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    padding: 18px 132px 18px 126px;
+    padding: 18px;
     align-content: center;
-
+    justify-content: center;
 }
 nav .navbar>.mainMenu>li>a{
     padding: 8px 18px;
     text-decoration: none;
-    color: #ccc;
+    color: #f5f5f5;
 }
 nav .navbar>.mainMenu>li>a.first4::after{
     content: "\f078";
@@ -92,7 +91,7 @@ nav .navbar>.mainMenu>li>a.first4::after{
     margin-left: 2px;
 }
 nav .navbar>.mainMenu>li>a:hover{
-    background-color: #333;
+    background-color: #343e5198;
     border-radius: 8px;
 }
 nav .navbar>.mainMenu>li>.innerList{
@@ -105,9 +104,9 @@ nav .navbar>.mainMenu>li>.innerList{
 }
 nav .navbar>.mainMenu>li:hover>.innerList{
     visibility: visible;
-    background-color: #222;
+    background-color: #111827;
     margin: 5px;
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 8px;
     padding: 20px 8px 0px;
 }
@@ -117,7 +116,7 @@ nav .navbar>.mainMenu>li>.innerList li{
 nav .navbar>.mainMenu>li>.innerList li a{
     text-decoration: none;
     padding: 8px 12px;
-    color: #ccc;
+    color: #f5f5f5;
     font-size: 14px;
     line-height: 21px;
 
@@ -126,23 +125,23 @@ nav .navbar>.mainMenu>li>.innerList li span{
     font-size: 14px;
     line-height: 21px;
     font-weight: 500;
-    color: #bbb;
 }
 nav .navbar>.mainMenu>li>.innerList li p{
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
-    color: #888;
+    color: #bbbbbb;
 }
 nav .navbar>.mainMenu>li>.innerList li:hover{
-    background-color: #333;
+    background-color: #111827;
     border-radius: 8px;
 }
 .nav-controls {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 10px 122px 10px 10px;
+    padding: 10px;
+    justify-content: center;
 }
 .icon-button {
     cursor: pointer;
@@ -153,11 +152,10 @@ nav .navbar>.mainMenu>li>.innerList li:hover{
     padding: 6px;
     border-radius: 8px;
     transition: background-color 0.2s ease;
-    color: white;
 }
-.theme-selector{
-    background-color: #1e1e1e;
-}
+/* .theme-selector{
+    
+} */
 .theme-selector #theme-select{
     align-items: center;
     border: none;
@@ -167,17 +165,25 @@ nav .navbar>.mainMenu>li>.innerList li:hover{
     transition: background-color 0.2s ease;
 }
 .theme-selector #theme-select:hover{
-    background-color: #333;
+    background-color: #676767;
 }
 .theme-selector #theme-select i{
-    color: white;
+    color: #f5f5f5;
+}
+.theme-selector #theme-select i#sun{
+    display: none;
+}
+.theme-selector #theme-select i#moon{
+    display: block;
 }
 .theme-selector .theme-list{
     list-style-type: none;
     visibility: hidden;
-    background-color: #1e1e1e;
+    background-color: #111827;
     position: absolute;
     z-index: 1000;
+    border-radius: 8px;
+    padding: 10px;
 }
 .theme-selector .theme-list li{
     width: 100%;
@@ -191,24 +197,27 @@ nav .navbar>.mainMenu>li>.innerList li:hover{
     transition: background-color 0.2s ease;
 }
 .theme-selector .theme-list li button:hover{
-    background-color: #333;
+    background-color: #676767;
 }
 .theme-selector .theme-list li button i{
-    color: white;
+    color: #f5f5f5;
 }
 .theme-selector .theme-list li button span{
     margin-left: 10px;
-    color: white;
+    color: #f5f5f5;
 }
 
+.icon-button {
+    color: #f5f5f5;
+}
 .icon-button:hover {
-    background-color: #333;
+    background-color: #676767;
 }
 
 .icon-button svg {
     width: 20px;
     height: 20px;
-    fill: #ccc;
+    fill: #f5f5f5;
     display: block;
 }
 
@@ -242,19 +251,22 @@ header{
     background-color: var(--color-info);
     color: white;
     /* padding: 3rem 1.5rem; */
+    height: 650px;
 }
 header .imageHeader{
     position: relative;
     padding: 120px 0px;
+    
 }
-header .imageHeader .headerSearch{
+header .imageHeader .headerSearch {
     position: absolute;
-    left: 440px;
-    top: 120px;
-    right: 440px;
-    bottom: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 660px;
+    min-width: 300px;
 }
-header .imageHeader .headerSearch h1{
+header .imageHeader .headerSearch h2{
     padding: 48px 0px;
     font-size: 60px;
     font-weight: bold(700);
@@ -266,12 +278,12 @@ header .imageHeader .headerSearch .inputSearch{
     padding-bottom: 48px;
 }
 header .imageHeader .headerSearch .inputSearch .search-container{
-    background: #ffffff;
+    background: white;
     border-radius: 12px;
     display: flex;
     align-items: center;
     width: 100%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     overflow: hidden;
     font-size: 16px;
     line-height: 24px;
@@ -282,7 +294,7 @@ header .imageHeader .headerSearch .inputSearch .search-container input[type="tex
     border: none;
     padding: 14px 10px 14px 35px;
     font-size: 16px;
-    color: #ccc;
+    color: #cccccc;
     outline: none;
     flex-grow: 1;
 }
@@ -291,6 +303,9 @@ header .imageHeader .headerSearch .inputSearch .search-container .divid{
     width: 1px;
     height: 40px;
 }
+.felo{
+        display: flex;
+    }
 #serviceInput{
     border-radius: 12px 0 0 12px;
     background-image: url(../images/search-interface-symbol.png);
@@ -308,7 +323,7 @@ header .imageHeader .headerSearch .inputSearch .search-container .divid{
     background-position: center left;
     width: 150px;
 }
-header .imageHeader .headerSearch .search-container .search-btn{
+header .imageHeader .headerSearch .inputSearch .search-container .search-btn{
     background-color: var(--color-primary);
     color: white;
     border: none;
@@ -320,7 +335,7 @@ header .imageHeader .headerSearch .search-container .search-btn{
     transition: background-color 0.3s ease;
     height: 48px;
 }
-header .imageHeader .headerSearch .search-container .search-btn:hover{
+header .imageHeader .headerSearch .inputSearch .search-container .search-btn:hover{
     background-color: #bd3d3b;
     
 }
@@ -332,7 +347,7 @@ header .imageHeader .headerSearch .headerLinks{
 header .imageHeader .headerSearch .headerLinks a{
     text-decoration: none;
     color: white;
-    background-color: #1a4f56;
+    background-color: #3d7a81;
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 50px;
@@ -344,72 +359,112 @@ header .imageHeader .headerSearch .headerLinks a{
 }
 header .imageHeader .headerSearch .headerLinks a:hover{
     background-color: white;
-    color: black;
+    color: #000000;
 }
-.pros{
-    background-color: #222;
-    margin: 0px 96px 16px 96px;
+.tweleveIcons {
+    background:#111827;
+    padding: 80px;
 }
-.pros .viewh2{
+
+.browseHeader {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
 }
-.pros .viewh2 h2{
-    margin: 48px 16px 0px 4px;
-    padding: 48px 834px 16px 0px;
-    font-size: 32px;
-    line-height: 40px;
+
+.browseHeader h1 {
+    font-size: 30px;
     font-weight: 600;
-    color: #ccc;
+    color: #e0e0e0;
 }
-.pros .viewh2 .view{
+
+.view {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     text-decoration: none;
-    color:#aaa;
-    margin-top: 96px;
+    color: #f5f5f5;
+    font-size: 16px;
 }
-.pros .viewh2 .view:hover{
+.view:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
-.pros .viewh2 .view::after{
-    content: "\f054";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    margin-left: 8px;
+.browseContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 20px;
 }
-.pros .link12{
+
+.proItem {
     display: flex;
-    flex-flow: row wrap;
-    padding: 0px 4px 48px 4px;
-    list-style-type: none;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
-.pros .link12 li{
-    flex: 0 0 25%;
-    text-decoration: none;
-    color:#aaa;
-    padding: 15px 45px 15px 4px;
-    display: flex;
-}
-.pros .link12 li i{
-    background-color: #444;
+
+.iconCircle {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    padding: 20px;
-    transition: transform 0.6s;
+    background: #343e5198;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
 }
-.pros .link12 li:hover i{
+
+.iconCircle i {
+    font-size: 20px;
+    color: #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+.proItem span {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.proItem:hover .iconCircle {
     transform: scale(1.1);
 }
-.pros .link12 li:hover span{
+
+.proItem:hover span {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
+
+    @media (max-width: 925px)
+{
+    .browseContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 781px)
+{
+    .browseContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 445px)
+{
+    .browseContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .getmatched{
-    background-color: #222;
+    background-color: #111827;
     margin: 0px 96px 16px 96px;
     display: flex;
 }
 .getmatched .leftGetmatched{
     padding: 48px 12px;
-    background-color: #222;
+    background-color: #111827;
     width: 415.975px;
     height: 470px;
     position: relative;
@@ -417,22 +472,20 @@ header .imageHeader .headerSearch .headerLinks a:hover{
 .getmatched .leftGetmatched .background{
     width: 306px;
     height: 470px;
-    background-color: #333;
+    background-color: #1d2735;
     position: relative;
     border-radius: 8px;
     padding: 0px 10px;
-    box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 24px;
 }
 .getmatched .leftGetmatched .background h2{
     padding: 48px 48px 8px 48px;
     font-size: 28px;
     line-height: 36.4px;
     font-weight: 600;
-    color: #ccc;
 }
 .getmatched .leftGetmatched .background p{
     padding: 0px 48px 48px 48px;
-    color: #888;
+    color: #bbbbbb;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -440,7 +493,7 @@ header .imageHeader .headerSearch .headerLinks a:hover{
 .getmatched .imgGetmatched{
     position: absolute;
     z-index: 99;
-    background-color: rgba(18, 18, 18, 0.5);
+    background-color: rgba(89, 97, 119, 0.5);
     margin-top: 240px;
     margin-left: 40px;
     padding: 45px 20px 30px 30px;
@@ -459,11 +512,11 @@ header .imageHeader .headerSearch .headerLinks a:hover{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: #ccc;
+    color: #f5f5f5;
 }
 .getmatched .rightGetmatched .viewh2 a{
     text-decoration: none;
-    color:#aaa;
+    color:#bbbbbb;
     margin-top: 48px;
 }
 .getmatched .rightGetmatched .viewh2 a:hover{
@@ -530,11 +583,11 @@ section.popularProjects{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: #ccc;
+    color: #f5f5f5;
 }
 .popularProjects .viewh2 a{
     text-decoration: none;
-    color:#aaa;
+    color:#bbbbbb;
     margin-top: 60px;
 }
 .popularProjects .viewh2 a:hover{
@@ -573,7 +626,7 @@ section.popularProjects .project .projectheader .overlay{
     position: absolute;
     bottom: 8px;
     left: 10px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.15);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -589,8 +642,8 @@ section.popularProjects .project .projectheader i{
     position: absolute;
     top: 20px;
     right: 20px;
-    color: #ccc;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: #f5f5f5;
+    background-color: rgba(30, 30, 30, 0.8);
     padding: 10px;
     border-radius: 50%;
     visibility: hidden;
@@ -602,7 +655,7 @@ section.popularProjects .project .projectheader:hover i{
 section.popularProjects .project .projectbody{
     display: flex;
     justify-content: space-between;
-    border: 1px solid #444;
+    border: 1px solid rgb(68, 68, 68);
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -617,7 +670,6 @@ section.popularProjects .project .projectbody .leftProjectBody i{
 section.popularProjects .project .projectbody .leftProjectBody p{
     font-size: 14px;
     font-weight: 400;
-    color: #ccc;
 }
 section.popularProjects .project .projectbody .leftProjectBody span{
     font-size: 12px;
@@ -631,21 +683,21 @@ section.popularProjects .project .projectbody .rightProjectBody a{
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 400;
-    background-color: #222;
-    color: #ccc;
+    background-color: #111827;
+    color: #f5f5f5;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #f5f5f5;
     text-decoration: none;
     transition: background 0.3s,color 0.3s;
 }
 section.popularProjects .project .projectbody .rightProjectBody a:hover{
-    background-color: #ccc;
-    color: #222;
+    background-color: #f5f5f5;
+    color: black;
 }
 section.expert{
     margin-top: 100px;
     padding: 60px 94px;
-    background-color: #222;
+    background-color: #1D2735;
 }
 .expert .viewh2{
     padding: 0px 12px 15px;
@@ -656,11 +708,11 @@ section.expert{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: #ccc;
+    color: #f5f5f5;
 }
 .expert .viewh2 a{
     text-decoration: none;
-    color:#aaa;
+    color:#bbbbbb;
     margin-top: 48px;
 }
 .expert .viewh2 a:hover{
@@ -701,7 +753,7 @@ section.expert{
     font-size: 12px;
     line-height: 12px;
     font-weight: 500;
-    background-color: #444;
+    background-color: #c4c5c62d;;
 }
 .expert .expertBody .prog .body h3{
     font-size: 20px;
@@ -710,7 +762,6 @@ section.expert{
     margin-left: 0px;
     margin-top: 5px;
     margin-bottom: 5px;
-    color: #ccc;
 }
 .expert .expertBody .prog:hover .body h3{
     text-decoration: underline;
@@ -720,7 +771,7 @@ section.expert{
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
-    color: #999;
+    color: #bbbbbb;
     margin-bottom: 10px;
 }
 .expert .expertBody .prog .body article span{
@@ -738,13 +789,12 @@ section.expert{
     line-height: 40px;
     font-weight: 600;
     padding: 20px 10px;
-    color: #ccc;
 }
 .howItWorks .top p{
     font-size: 18px;
     line-height: 27px;
     font-weight: 400;
-    color: #aaa;
+    color: #bbbbbb;
 }
 .howItWorks .bottom{
     display: flex;
@@ -757,17 +807,19 @@ section.expert{
 .howItWorks .each svg{
     padding-left: 10px;
     margin-bottom: 20px;
+    fill: white;
+    stroke: white;
+    stroke-width: 2;
 }
 .howItWorks .each h3{
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
     padding-bottom: 10px;
-    color: #ccc;
     
 }
 .howItWorks .each p{
-    color: #aaa;
+    color: #bbbbbb;
 }
 .customize{
     position: fixed;
@@ -776,24 +828,24 @@ section.expert{
     z-index:1000;
 }
 .customize button.sett{
-    color: gray;
-    background-color: #222;
+    color: #bbbbbb;
+    background-color: #111827;
     transform: rotate(-90deg);
     padding: 10px 15px;
-    border: 0.5px solid #444;
+    border: 0.5px solid white;
     border-radius: 20px;
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
     font-size: 11px;
-    border-color: #444;
+    border-color: #bbbbbb;
     transition: background-color 1s ease;
 }
 
 .customize button.sett:hover{
-    border-color: #ccc;
-    color: #ccc;
+    border-color: #f5f5f5;
+    color: #f5f5f5;
 }
 
 .customize button.sett:hover i{
@@ -820,7 +872,7 @@ aside.customizer {
     position: fixed;
     top: 0; right: 0; bottom: 0;
     width: 300px;
-    background: rgb(0, 0, 0);
+    background: #111827;
     box-shadow: -4px 0 8px rgb(0 0 0 / 0.15);
     padding: 1.5rem 1.5rem 2rem 1.5rem;
     overflow-y: auto;
@@ -829,12 +881,21 @@ aside.customizer {
     visibility: hidden;
 }
 
-aside.customizer header {
+aside.customizer .header {
     font-size: 1.25rem;
     font-weight: 700;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #444;
     padding-bottom: 0.75rem;
     margin-bottom: 1rem;
+}
+aside.customizer .header button{
+    float:right;
+    font-weight: 700;
+    background:none;
+    border:none;
+    font-size:1.25rem;
+    cursor:pointer;
+    color: #bbbbbb;
 }
 
 aside.customizer section {
@@ -844,7 +905,7 @@ aside.customizer section {
 aside.customizer h2 {
     font-weight: 600;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #444;
     padding-bottom: 0.5rem;
 }
 
@@ -870,32 +931,32 @@ aside.customizer input[type="text"] {
     border-radius: 0.3rem;
     border: 1px solid #ccc;
     font-family: monospace;
-    color: #333;
+    color: #1d2735;
 }
 main>.top{
     position: fixed;
     top: 60%;
     right: -10px;
-    z-index:1000;
+    z-index:99;
 }
 main>.top a{
-    color: gray;
-    background-color: #222;
+    color: #bbbbbb;
+    background-color: #111827;
     transform: rotate(-90deg);
     padding: 10px 15px;
-    border: 0.5px solid #444;
+    border: 0.5px solid white;
     border-radius: 20px;
     display: flex;
     align-items: center;
     gap: 5px;
     text-decoration: none;
     font-size: 11px;
-    border-color: #444;
+    border-color: #bbbbbb;
     transition: background-color 1s ease;
 }
 main>.top a:hover{
-    border-color: #ccc;
-    color: #ccc;
+    border-color: #f5f5f5;
+    color: #f5f5f5;
 }
 
 section.business{
@@ -941,7 +1002,7 @@ section.business .businessLeft .submitBtn{
     font-weight: 600;
     cursor: pointer;
     color: rgb(255, 255, 255);
-    background-color: #1a4f56;
+    background-color: #3d7a81;
     padding: 14px 24px;
     margin-left: 10px;
     transition: 0.4s;
@@ -950,7 +1011,7 @@ section.business .businessLeft .submitBtn:hover i{
     animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 section.business .businessLeft .submitBtn:hover{
-    color: #000000;
+    color: black;
     background-color: white;
 }
 section.business .businessRight{
@@ -972,7 +1033,7 @@ section.business .businessRight{
 section.getFinder{
     margin: 112px 112px 64px 112px;
     display: flex;
-    background-color: #2a1a1a;
+    background-color: #251d2a;
     border-radius: 8px;
 }
 section.getFinder .left{
@@ -984,13 +1045,12 @@ section.getFinder .left h2{
     font-size: 40px;
     line-height: 48px;
     font-weight: 600;
-    color: #ccc;
 }
 section.getFinder .left p{
     padding-top: 8px;
     padding-bottom: 24px;
     padding-left: 120px;
-    color: #aaa;
+    color: #cccccc;
 }
 section.getFinder .left .finderGetLinks{
     padding-bottom: 86px;
@@ -999,7 +1059,7 @@ section.getFinder .left .finderGetLinks{
 section.getFinder .left .finderGetLinks a{
     text-decoration: none;
     display: inline-block;
-    background-color: #444;
+    background-color: #1D2735;
     color: white;
     display: inline-flex;
     padding: 10px 15px;
@@ -1012,14 +1072,14 @@ section.getFinder .left .finderGetLinks a.a1{
     transition: 0.3s;
 }
 section.getFinder .left .finderGetLinks a.a1:hover{
-    background-color: #666;
+    background-color: #2c3447;
 }
 section.getFinder .left .finderGetLinks a.a2{
     margin-left: 10px;
     transition: 0.3s;
 }
 section.getFinder .left .finderGetLinks a.a2:hover{
-    background-color: #666;
+    background-color: #2c3447;
 }
 section.getFinder .right{
     width: 50%;
@@ -1036,11 +1096,11 @@ section.common{
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
-    color: #ccc;
+    color: #f5f5f5;
 }
 .common .viewh2 a{
     text-decoration: none;
-    color:#aaa;
+    color:#bbbbbb;
     margin-top: 48px;
 }
 .common .viewh2 a:hover{
@@ -1072,7 +1132,7 @@ section.common{
     transform: scale(1.05);
 }
 .common .commonBody .commonEach .rightEach{
-    border: 1px solid #444;
+    border: 1px solid rgb(68, 68, 68);
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
     width: 100%;
@@ -1085,41 +1145,42 @@ section.common{
     padding-left: 18px;
     padding-top: 20px;
     padding-bottom: 10px;
-    color: #ccc;
 }
 .common .commonBody .commonEach:hover .rightEach h4{
     text-decoration: underline;
     text-underline-offset: 4px;
+}
+.common .commonBody .commonEach .rightEach i{
+    color: #fc9231;
 }
 .common .commonBody .commonEach .rightEach p{
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
     padding-left: 18px;
-    color: #aaa;
 }
 .common .commonBody .commonEach .rightEach p span{
     font-size: 12px;
     line-height: 12px;
     font-weight: 300;
     padding-right: 20px;
-    color: #ccc;
+    color: #cccccc;
 }
 .common .commonBody .commonEach .rightEach .commonA{
     padding: 50px 0px 10px 18px;
 }
 .common .commonBody .commonEach .rightEach a{
-    background-color: #222;
+    background-color: #111827;
     text-decoration: none;
-    color: #ccc;
-    border: 1px solid #ccc;
+    color: #f5f5f5;
+    border: 1px solid #f5f5f5;
     border-radius: 8px;
     padding: 10px 20px;
     transition: 0.3s;
 }
 .common .commonBody .commonEach .rightEach a:hover{
-    color: #222;
-    background-color: #ccc;
+    color: black;
+    background-color: #f5f5f5;
 }
 footer{
     background-color: #111827;
@@ -1355,22 +1416,18 @@ footer .bottom .b2 a:hover{
 footer .bottom .b2 img{
     padding: 10px;
 }
-
 @media (max-width: 768px){
-    nav .navbar>.mainMenu{
-        display: none;
-    }
     .nav-controls{
-        padding: 10px 10px 10px 10px;
+        padding: 10px;
     }
     header .imageHeader{
         padding: 60px 0px;
+        height: 500px;
     }
     header .imageHeader img{
         display: none;
     }
     header .imageHeader .headerSearch{
-        position: static;
         width: 90%;
         margin: 0 auto;
         padding: 20px 0;
@@ -1389,8 +1446,11 @@ footer .bottom .b2 img{
         }
     header .imageHeader .headerSearch .inputSearch .search-container input[type="text"] {
         width: auto;
-        padding: 20px 30px 0px 0px;
+        padding: 20px 30px 0 0;
         text-align: center;
+    }
+    .felo{
+        display: flex;
     }
     #serviceInput {
         margin-bottom: 10px;
@@ -1693,7 +1753,7 @@ footer .bottom .b2 img{
         height: auto;
     }
     .common .commonBody .commonEach .rightEach {
-        border-left: 1px solid rgb(239, 238, 238); 
+        border-left: 1px solid rgb(68, 68, 68); 
     }
     .common .commonBody .commonEach .rightEach h4 {
         padding-left: 10px;
@@ -1804,8 +1864,38 @@ footer .bottom .b2 img{
         padding: 5px;
     }
 }
-@media (min-width: 768px) {
+@media (min-width: 1120px) {
     .mobile-menu-toggle {
         display: none;
     }
+}
+@media (max-width: 1120px) {
+    nav .navbar>.mainMenu{
+        display: none;
+    }
+    .getmatched .leftGetmatched{
+        display: none;
+    }
+    .getmatched .imgGetmatched{
+        display: none;
+    }
+}
+@media (max-width: 1570px) and (min-width: 768px) {
+    header .imageHeader{
+        padding: 60px 0px;
+        height: 500px;
+    }
+    header .imageHeader img{
+        position: relative;
+    }
+    header .imageHeader .headerSearch{
+        position: absolute;
+        margin: 0 auto;
+    }
+    header .imageHeader .headerSearch h1{
+        font-size: 40px;
+        line-height: 1.2;
+        padding: 20px 10px;
+    }
+    
 }

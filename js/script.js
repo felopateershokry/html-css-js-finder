@@ -1,36 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            
-            if (mobileMenuToggle && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('active');
-                    
-                    const icon = this.querySelector('i');
-                    if (mobileMenu.classList.contains('active')) {
-                        icon.className = 'fa-solid fa-times';
-                    } else {
-                        icon.className = 'fa-solid fa-bars';
-                    }
-                });
-                
-                document.addEventListener('click', function(event) {
-                    if (!mobileMenuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
-                        mobileMenu.classList.remove('active');
-                        const icon = mobileMenuToggle.querySelector('i');
-                        icon.className = 'fa-solid fa-bars';
-                    }
-                });
-                
-                window.addEventListener('resize', function() {
-                    if (window.innerWidth > 768) {
-                        mobileMenu.classList.remove('active');
-                        const icon = mobileMenuToggle.querySelector('i');
-                        icon.className = 'fa-solid fa-bars';
-                    }
-                });
-            }
-        });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.querySelector(".menu-btn button");
+    const menuIcon = menuBtn.querySelector("i");
+    const sideMenu = document.querySelector(".side-menu");
+    const overlay = document.querySelector(".overlay");
+
+    menuBtn.addEventListener("click", function () {
+        const isOpen = sideMenu.classList.toggle("active");
+        overlay.classList.toggle("active");
+
+    
+    });
+});
+
 
 document.getElementById("theme-select").onclick=function(){
     let element = document.querySelector(".theme-list");

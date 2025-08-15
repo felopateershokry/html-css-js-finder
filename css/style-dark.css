@@ -506,9 +506,10 @@ header .imageHeader .headerSearch .headerLinks a:hover{
 .getmatched .rightGetmatched .viewh2{
     padding: 0px 12px 32px;
     display: flex;
+    justify-content: space-between;
 }
 .getmatched .rightGetmatched .viewh2 h2{
-    padding: 48px 380px 8px 0px;
+    padding-top: 48px;
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
@@ -571,15 +572,57 @@ header .imageHeader .headerSearch .headerLinks a:hover{
     font-size: 12px;
     font-weight: 200;
 }
+
+@media (max-width:1115px) {
+    .getmatched .leftGetmatched{
+        display: none;
+    }
+    .getmatched .imgGetmatched{
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .getmatched{
+        margin: 0px 20px;
+    }
+    .getmatched .rightGetmatched{
+        padding: 20px 0px 0px 20px;
+    }
+    .getmatched .rightGetmatched .viewh2 h2{
+        padding: 20px 0px 8px 0px;
+    }
+    .getmatched .rightGetmatched .viewh2 a{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 634px){
+    .getmatched{
+        flex-direction: column;
+        margin: 0px 20px;
+    }
+    .getmatched .rightGetmatched{
+        padding: 20px 0px 0px 20px;
+    }
+    .getmatched .rightGetmatched .viewh2 h2{
+        padding: 20px 0px 8px 0px;
+    }
+    .getmatched .rightGetmatched .viewh2 a{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
 section.popularProjects{
     margin: 48px 96px;
 }
 .popularProjects .viewh2{
     padding: 0px 12px 15px;
     display: flex;
+    justify-content: space-between;
 }
 .popularProjects .viewh2 h2{
-    padding: 60px 850px 8px 10px;
+    padding-top: 60px;
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
@@ -702,9 +745,10 @@ section.expert{
 .expert .viewh2{
     padding: 0px 12px 15px;
     display: flex;
+    justify-content: space-between;
 }
 .expert .viewh2 h2{
-    padding: 48px 1000px 8px 10px;
+    padding-top: 48px;
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;
@@ -1090,9 +1134,10 @@ section.common{
 .common .viewh2{
     padding: 0px 12px 15px;
     display: flex;
+    justify-content: space-between;
 }
 .common .viewh2 h2{
-    padding: 48px 800px 8px 10px;
+    padding-top: 48px;
     font-size: 32px;
     line-height: 40px;
     font-weight: 600;

@@ -1235,6 +1235,7 @@ footer{
 footer .upper{
     color: white;
     display: flex;
+    justify-content: space-between;
 }
 footer .upper .upl{
     display: flex;
@@ -1261,7 +1262,8 @@ footer .upper h3.left{
     color: #9da2ad;
 }
 footer .upper a.sub{
-    margin: 50px 620px 50px 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 10px 20px;
     color: white;
     background-color: var(--color-primary);
@@ -1296,7 +1298,7 @@ footer .bigFooter{
 }
 footer .left{
     margin-left: -20px;
-    padding-right: 60px;
+    /* padding-right: 60px; */
 }
 footer .left>a{
     text-decoration: none;
@@ -1350,9 +1352,9 @@ footer .left .mediaIcons a #i1{
 footer .right{
     display: flex;
 }
-footer .right .footer-section{
+/* footer .right .footer-section{
     margin: 48px 12px 0px 180px;
-}
+} */
 .footer-section h3{
     color: #f1f5f9;
     font-size: 20px;
@@ -1409,6 +1411,7 @@ footer .bottom .b1{
     display: flex;
     justify-content: space-between;
     padding-bottom: 9px;
+    flex-flow: row wrap;
 }
 footer .bottom .b1 h5{
     color: white;
@@ -1417,6 +1420,7 @@ footer .bottom .b1 h5{
     line-height: 27px;
 }
 footer .bottom .b1 a{
+    width: auto;
     text-decoration: none;
     color: rgb(222, 222, 222);
     border-radius: 20px;
@@ -1435,7 +1439,7 @@ footer .bottom .b2{
     display: flex;
     padding: 50px 0px 34px 0px;
 }
- footer .bottom .b2 .bol{
+footer .bottom .b2 .bol{
     margin-top: 15px;
 } 
 footer .bottom .b2 span{
@@ -1477,8 +1481,8 @@ footer .bottom .b2 img{
         margin: 0 auto;
         padding: 20px 0;
     }
-    header .imageHeader .headerSearch h1{
-        font-size: 40px;
+    header .imageHeader .headerSearch h2{
+        font-size: 30px;
         line-height: 1.2;
         padding: 20px 10px;
     }
@@ -1852,7 +1856,7 @@ footer .bottom .b2 img{
         width: 100%;
     }
     footer .right .footer-section {
-        margin: 20px 80px 0 0;
+        /* margin: 20px 80px 0 0; */
         width: 100%;
     }
     .footer-section h3 {
@@ -1925,6 +1929,85 @@ footer .bottom .b2 img{
         display: none;
     }
 }
+@media (max-width: 1120px) {
+    nav .navbar>.mainMenu{
+        display: none;
+    }
+    .getmatched .leftGetmatched{
+        display: none;
+    }
+    .getmatched .imgGetmatched{
+        display: none;
+    }
+    section.business{
+        flex-direction: column;
+    }
+    section.business .businessLeft{
+        width: 100%;
+        padding: 50px 20px;
+        text-align: center
+    }
+    section.business .businessLeft h2{
+        padding: 20px 80px 10px 80px;
+        font-size: 28px;
+    }
+    section.business .businessLeft .a{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+    section.business .businessLeft a.a1{
+        width: auto;
+    }
+    section.business .businessLeft .submitBtn{
+        width: auto;
+        margin-left: 10px;
+        margin-top: -10px;
+    }
+    section.business .businessRight{
+        display: none;
+    }
+    section.getFinder{
+        margin: 50px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    section.getFinder .left{
+        width: 100%;
+    }
+    section.getFinder .left h2{
+        padding-top: 30px;
+        padding-left: 20px;
+        font-size: 32px;
+        line-height: 1.2;
+        text-align: center;
+    }
+    section.getFinder .left p {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    section.getFinder .left .finderGetLinks {
+        padding-bottom: 30px;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+    }
+    section.getFinder .left .finderGetLinks a {
+        width: auto;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    section.getFinder .left .finderGetLinks a.a2 {
+        margin-left: 10px;
+    }
+    section.getFinder .right {
+        width: 80%;
+    }
+}
 @media (max-width: 1570px) and (min-width: 768px) {
     header .imageHeader{
         padding: 60px 0px;
@@ -1943,4 +2026,72 @@ footer .bottom .b2 img{
         padding: 20px 10px;
     }
     
+}
+
+@media (max-width: 1300px) and (min-width: 900px){
+    .popularProjects .bigProgect{
+        flex-flow: row wrap;
+    }
+    section.popularProjects .bigProgect .project{
+        flex: 0 0 50%;
+        padding: 10px 0;
+    }
+}
+@media (max-width: 900px) and (min-width: 768px){
+    .popularProjects .bigProgect{
+        flex-direction: column;
+    }
+    section.popularProjects .bigProgect .project{
+        flex: 0 0 100%;
+        padding: 10px 0;
+    }
+}
+@media (max-width: 985px) and (min-width: 768px){
+    .common .commonBody {
+        flex-direction: column;
+    }
+    .common .commonBody .commonEach {
+        flex: 0 0 100%;
+        padding: 10px 0;
+    }
+    .common .commonBody .commonEach img {
+        width: 150px;
+        height: auto;
+    }
+    .common .commonBody .commonEach .rightEach {
+        border-left: 1px solid rgb(239, 238, 238); 
+    }
+    .common .commonBody .commonEach .rightEach h4 {
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .common .commonBody .commonEach .rightEach p {
+        padding-left: 10px;
+    }
+    .common .commonBody .commonEach .rightEach .commonA {
+        padding: 20px 0px 10px 10px;
+    }
+}
+@media (max-width: 930px) and (min-width: 768px){
+    footer .upper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+    footer .upper i{
+        padding: 20px 0;
+        width: auto;
+    }
+    footer .upper h3.right,footer .upper h3.left {
+        padding: 20px 10px;
+        width: auto;
+    }
+    footer .upper a.sub {
+        margin: 20px 0;
+        width: auto;
+        text-align: center;
+    }
+    footer .upper a.contact {
+        padding: 20px 0;
+    }
 }

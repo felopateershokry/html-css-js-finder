@@ -1351,6 +1351,7 @@ footer .hr{
 }
 footer .bigFooter{
     display: flex;
+    justify-content: space-between;
 }
 footer .left{
     margin-left: -20px;
